@@ -1,0 +1,24 @@
+.card{
+ 
+    width:60%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-height: 50vh;
+    border-radius: 50px;
+}
+
+h1, h2{
+    margin-left: 20px;
+    padding: 20px 0px 0px 0px;
+}
+
+h3{
+    margin-left: 20px;
+    line-height:5px;
+}
+
+button{
+    width: 12%;
+    margin-top: 20px;
+    margin-left: 50px;
+}

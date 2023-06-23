@@ -1,0 +1,37 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+
+        <div class="card">
+            <h1>User <span>Update</span></h1>
+  
+            <form (ngSubmit)="doSubmit(login.getUser().customerId)">
+        
+              <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Enter Name</mat-label>
+                <input matInput placeholder="jainendra" name="name" [(ngModel)] = "UserData.name">
+              </mat-form-field>
+        
+              <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Enter Email</mat-label>
+                <input matInput placeholder="pat@example.com"  name="email" [(ngModel)] = "UserData.email">
+              </mat-form-field>
+        
+              <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Enter Mobile Number</mat-label>
+                <input matInput placeholder="Mobile Number" type="number" name="Mobile" [(ngModel)] = "UserData.mobile">
+              </mat-form-field>
+        
+              <div class="btn">
+                <button  mat-raised-button color="primary"
+                  style="margin-right: 10px; background-color: rgb(255, 174, 0);">Send</button>
+
+                <button type="reset" mat-raised-button style="background-color: rgb(27, 13, 13); color: azure;">Reset</button>
+              </div>
+        
+            </form>
+        </div>
+
+    </div>
+
+</div>

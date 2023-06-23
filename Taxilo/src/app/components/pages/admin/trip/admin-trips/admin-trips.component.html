@@ -1,0 +1,28 @@
+<mat-card class="card">
+
+    <h1>Trips</h1>
+
+    <table>
+        <tr>
+            <td>TripId</td>
+            <td>DriverId</td>
+            <td>CustomerId</td>
+            <td>From</td>
+            <td>To</td>
+            <td>Status</td>
+            <td>Details</td>
+        </tr>
+        <tr *ngFor="let trip of trips">
+             <td>{{trip.tripBookingId}}</td>
+             <td>{{trip?.driver?.driverId || 'null'}}</td>
+             <td>{{trip?.customer?.customerId || 'null'}}</td>
+             <td>{{trip.fromLocation}}</td>
+             <td>{{trip.toLocation}}</td>
+             <td *ngIf="trip.status==false">Cancelled</td>
+             <td *ngIf="trip.status==true">Done</td>
+             <td><button mat-raised-button (click)="tripDetail(trip.tripBookingId)">Details</button></td>
+
+        </tr>
+    </table>
+
+</mat-card>

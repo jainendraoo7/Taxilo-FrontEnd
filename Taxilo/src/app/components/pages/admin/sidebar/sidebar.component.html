@@ -1,0 +1,22 @@
+<mat-card style="height: 90vh;" class="card">
+ 
+    <mat-action-list class="action">
+        <div mat-subheader class="header">Menu <br><br>
+            <button mat-list-item routerLink="/admin"><i class="fa fa-home"></i><span>Home</span></button>
+            <button mat-list-item routerLink="/admin/profile"><i class="fa fa-user"></i><span>Profile</span></button> 
+            <button mat-list-item routerLink="/admin/drivers" *ngIf="isAdminUser()"><i class="fa fa-car" style="font-size:20px;"></i><span>Drivers</span></button>
+            <button mat-list-item routerLink="/admin/users" *ngIf="isAdminUser()" ><i class="fa fa-user"></i><span>Users</span></button>
+            <button mat-list-item routerLink="/admin/cab" *ngIf="isAdminUser()" ><i class="fa fa-taxi" style="font-size:20px;"></i><span>Cabs</span></button>
+            <button mat-list-item routerLink="/admin/queries" *ngIf="isAdminUser()"><i class="fa fa-question"></i><span>Queries</span></button>
+            <button mat-list-item routerLink="/admin/current-booking" *ngIf="!isAdminUser()"><i class="fa fa-suitcase" style="font-size:20px;"></i><span>Booking</span></button>
+            <button mat-list-item routerLink="/admin/allTrips" *ngIf="!isAdminUser()"><i class="fa fa-car" style="font-size:20px;"></i><span>Trips</span></button>
+            <button mat-list-item routerLink="/admin/tripsbyall" *ngIf="isAdminUser()"><i class="fa fa-suitcase" style="font-size:25px;"></i><span>Trips</span></button>
+            <button mat-list-item routerLink="/admin/help" *ngIf="!isAdminUser()"><i class="fa fa-phone"></i><span>Help</span></button>
+            <button mat-list-item routerLink="/admin/privacy" *ngIf="!isAdminUser()"><i class="fa fa-lock"></i><span>Privacy</span></button>
+        </div>
+           
+    </mat-action-list>
+
+    
+
+</mat-card> 

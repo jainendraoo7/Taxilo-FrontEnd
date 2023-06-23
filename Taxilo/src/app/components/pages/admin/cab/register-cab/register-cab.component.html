@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="card">
+
+        <h1>Register <span>Cab</span></h1>
+
+        <form (ngSubmit)="registerCab()">
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Enter CabName</mat-label>
+                <input matInput placeholder="Etios" name="cabName" [(ngModel)]="cabData.cabName">
+            </mat-form-field>
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Enter CabNumber</mat-label>
+                <input matInput placeholder="Etios" name="cabNumber" [(ngModel)]="cabData.cabNumber">
+            </mat-form-field>
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Select CabType</mat-label>
+                <mat-select [(ngModel)]="cabData.cabType" name="cabType">
+                  <mat-option value="Mini">Mini</mat-option>
+                  <mat-option value="Sedan">Sedan</mat-option>
+                  <mat-option value="Suv">Suv</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <div class="btn">
+                <button type="submit" mat-raised-button color="primary"
+                  style="margin-right: 10px; background-color: rgb(255, 174, 0);">Send</button>
+                <button type="reset" mat-raised-button style="background-color: rgb(27, 13, 13); color: azure;">Reset</button>
+              </div>
+        </form>
+
+    </div>
+
+</div>

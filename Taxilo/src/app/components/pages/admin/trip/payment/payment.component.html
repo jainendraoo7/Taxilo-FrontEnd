@@ -1,0 +1,31 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card class="card">
+        
+         <h1>Pay<span>Bill</span></h1>
+
+        <form action="">
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Select Payment-Option</mat-label>
+                <mat-select>
+                    <mat-option value="Mini" >Debit-card</mat-option>
+                    <mat-option value="Sedan" >Credit-card</mat-option>
+                    <mat-option value="Suv" >UPI</mat-option>
+                    <mat-option value="Suv" >PhonePe</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Enter CardNumber</mat-label>
+                <input matInput placeholder="CardNumber Or UPI-ID">
+              </mat-form-field>
+
+        </form>
+
+           <button mat-raised-button color="warn" (click)="payBill(userService.getCurrentBooking().tripBookingId)">Pay</button>
+
+    </mat-card>
+
+</div>

@@ -1,0 +1,139 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card class="card">
+
+        <h1>Trip Details</h1>
+
+        <div class="container1" style="margin: auto;">
+
+            <div class="left">
+                <table>
+                      
+                    <tr>
+                        <td>TripId</td>
+                        <td>{{userService.getTripDetailBooking().tripBookingId}}</td>
+                    </tr>
+                    <tr>
+                        <td>From</td>
+                        <td>{{userService.getTripDetailBooking().fromLocation}}</td>
+                    </tr>
+                    <tr>
+                        <td>To</td>
+                        <td>{{userService.getTripDetailBooking().toLocation}}</td>
+                    </tr>
+                    <tr>
+                        <td>From-Date</td>
+                        <td>{{userService.getTripDetailBooking().fromDateTime}}</td>
+                    </tr>
+                    <tr>
+                        <td>To-Date</td>
+                        <td>{{userService.getTripDetailBooking().toDateTime}}</td>
+                    </tr>
+                    <tr>
+                        <td>CabType</td>
+                        <td>{{userService.getTripDetailBooking().cabType}}</td>
+                    </tr>
+                    <tr>
+                        <td>Distance</td>
+                        <td>{{userService.getTripDetailBooking().distanceInKm}}KM</td>
+                    </tr>
+                    <tr>
+                        <td>BillStatus</td>
+                        <td>{{userService.getTripDetailBooking().billStatus}}</td>
+                    </tr>
+                    <tr>
+                        <td>Bill</td>
+                        <td>{{userService.getTripDetailBooking().bill}}&#x20B9;</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+              <div class="container2">
+                <div class="middle" *ngIf="isUser() || isAdminUser()">
+
+                    <table>
+                        <tr>
+                            <td>DriverId</td>
+                            <td>{{userService.getTripDetailBooking().driver.driverId}}</td>
+                        </tr>
+                        <tr>
+                            <td>Driver-Name</td>
+                            <td>{{userService.getTripDetailBooking().driver.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Driver-Email</td>
+                            <td>{{userService.getTripDetailBooking().driver.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Driver-Mobile</td>
+                            <td>{{userService.getTripDetailBooking().driver.mobile}}</td>
+                        </tr>
+                    </table>
+    
+                </div>
+
+                <div class="middle1" *ngIf="isDriver() || isAdminUser()">
+
+                    <table>
+                        <tr>
+                            <td>CustomerId</td>
+                            <td>{{userService.getTripDetailBooking().customer.customerId}}</td>
+                        </tr>
+                        <tr>
+                            <td>Driver-Name</td>
+                            <td>{{userService.getTripDetailBooking().customer.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Driver-Email</td>
+                            <td>{{userService.getTripDetailBooking().customer.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Driver-Mobile</td>
+                            <td>{{userService.getTripDetailBooking().customer.mobile}}</td>
+                        </tr>
+                    </table>
+    
+                </div>
+    
+                <div class="right">
+    
+                    <table>
+                        <tr>
+                            <td>CabID</td>
+                            <td>{{userService.getTripDetailBooking().driver.cab.cabId}}</td>
+                        </tr>
+                        <tr>
+                            <td>CabName</td>
+                            <td>{{userService.getTripDetailBooking().driver.cab.cabName}}</td>
+                        </tr>
+                        <tr>
+                            <td>CabTypr</td>
+                            <td>{{userService.getTripDetailBooking().driver.cab.cabType}}</td>
+                        </tr>
+                        <tr>
+                            <td>cabNumber</td>
+                            <td>{{userService.getTripDetailBooking().driver.cab.cabNumber}}</td>
+                        </tr>
+                    </table>
+    
+                </div>
+              </div>
+
+
+
+
+            <!-- <div class="bill">
+                <h2>Bill: {{driverService.getCurrentBooking().bill}}&#x20B9;</h2>
+                <button mat-raised-button routerLink="/payment" *ngIf="driverService.getCurrentBooking().billStatus==false">PayBill</button>
+            </div> -->
+<!-- 
+          <div class="btn">
+             <button mat-raised-button color="primary" routerLink="/updateTrip">Update-Trip</button>
+             <button mat-raised-button color="warn">Cancel-Trip</button>
+          </div> -->
+
+    </mat-card>
+
+</div>

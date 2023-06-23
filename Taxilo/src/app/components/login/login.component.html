@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card">
+
+    <h1>Log <span>In</span></h1>
+
+    <form (ngSubmit)="doSubmitlogin()">
+
+
+      <mat-form-field style="width: 80%;" appearance="outline">
+        <mat-label>Enter Username</mat-label>
+        <input matInput placeholder="Mobile Number" type="email" name="email" [(ngModel)]="logIn.email">
+      </mat-form-field>
+
+      <mat-form-field style="width: 80%;" appearance="outline">
+        <mat-label>Enter Password</mat-label>
+        <input matInput placeholder="password" type="password" name="password" [(ngModel)]="logIn.password">
+      </mat-form-field>
+
+      <div class="btn">
+        <button type="submit" mat-raised-button color="primary"
+          style="margin-right: 10px; background-color: rgb(255, 174, 0);">Send</button>
+        <button type="reset" mat-raised-button style="background-color: rgb(27, 13, 13); color: azure;">Reset</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

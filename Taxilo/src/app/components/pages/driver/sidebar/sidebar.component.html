@@ -1,0 +1,17 @@
+<mat-card style="height: 70vh; position: fixed;" class="card">
+ 
+    <mat-action-list class="action">
+        <div mat-subheader class="header">Menu<br><br>
+            <button mat-list-item routerLink="/driver"><i class="fa fa-home"></i><span>Home</span></button>
+            <button mat-list-item routerLink="/driver/driverProfile"><i class="fa fa-user"></i><span>Profile</span></button> 
+            <button mat-list-item routerLink="/driver/helps"><i class="fa fa-phone"></i><span>Help</span></button>
+            <button mat-list-item routerLink="/driver/current-booking" *ngIf="tripOn()"><i class="fa fa-suitcase"></i><span>Trip-ON</span></button>
+            <button mat-list-item routerLink="/driver/driverTrips"><i class="fa fa-taxi" style="font-size: 20px;"></i><span>Trips</span></button>
+            <button mat-list-item routerLink="/driver/privacy"><i class="fa fa-lock"></i><span>Privacy</span></button>
+        </div>
+           
+    </mat-action-list>
+
+    
+
+</mat-card> 

@@ -1,0 +1,33 @@
+<mat-card class="card">
+
+    <h1> Trips</h1>
+
+<table>
+
+    <tr>
+        <td>From</td>
+        <td>To</td>
+        <td>Date-From</td>
+        <td>Date-To</td>
+        <td>Distance</td>
+        <td>Cab</td>
+        <td>Trip-Status</td>
+        <td>Details</td>
+    </tr>
+
+    <tr *ngFor="let trip of trips">
+       <td>{{trip.fromLocation}}</td>
+       <td>{{trip.toLocation}}</td>
+       <td>{{trip.fromDateTime}}</td>
+       <td>{{trip.toDateTime}}</td>
+       <td>{{trip.distanceInKm}}</td>
+       <td>{{trip?.driver?.cab?.cabName || 'null'}}</td>
+       <td *ngIf="trip.status==false">Cancelled</td>
+       <td *ngIf="trip.status==true">Done</td>
+
+       <td><button mat-raised-button color="warn" (click)="tripDetail(trip.tripBookingId)">Details</button></td>
+    </tr>
+
+</table>
+
+</mat-card>

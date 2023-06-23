@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="card">
+
+    <h1>Sign <span>Up</span></h1>
+
+    <form (ngSubmit)="doSubmitForm()">
+
+      <mat-form-field style="width: 80%;" appearance="outline">
+        <mat-label>Enter Name</mat-label>
+        <input matInput placeholder="jainendra" name="name" [(ngModel)]="data.name">
+      </mat-form-field>
+
+      <mat-form-field style="width: 80%;" appearance="outline">
+        <mat-label>Enter Email</mat-label>
+        <input matInput placeholder="pat@example.com" name="email" [(ngModel)]="data.email">
+      </mat-form-field>
+
+      <mat-form-field style="width: 80%;" appearance="outline">
+        <mat-label>Enter Password</mat-label>
+        <input matInput placeholder="password" type="password" name="password" [(ngModel)]="data.password">
+        <mat-hint>password must be 8 characters</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field style="width: 80%;" appearance="outline">
+        <mat-label>Enter Mobile Number</mat-label>
+        <input matInput placeholder="Mobile Number" type="number" name="mobile" [(ngModel)]="data.mobile">
+      </mat-form-field>
+
+      <mat-form-field style="width: 80%;" appearance="outline">
+        <mat-label>Enter License Number</mat-label>
+        <input matInput placeholder="License Number" name="license" [(ngModel)]="data.license">
+      </mat-form-field>
+
+      <div class="btn">
+        <button type="submit" mat-raised-button color="primary"
+          style="margin-right: 10px; background-color: rgb(255, 174, 0);">Send</button>
+        <button type="reset" mat-raised-button style="background-color: rgb(27, 13, 13); color: azure;">Reset</button>
+      </div>
+
+    </form>
+    <!-- {{data | json}} -->
+  </div>
+</div>

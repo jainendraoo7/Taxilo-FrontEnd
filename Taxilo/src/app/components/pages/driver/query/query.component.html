@@ -1,0 +1,22 @@
+<div class="bootstrap-wrapper">
+
+    <h1 style="margin-top: 50px;">Query</h1>
+
+    <mat-card class="card">
+
+        <form class="example-form" (ngSubmit)="generateQuery(login.getUser().driverId)">
+            <mat-form-field class="example-full-widths">
+              <mat-label>Subject</mat-label>
+              <input matInput placeholder="Application Support" name="subject" [(ngModel)]="queryMess.subject">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+              <mat-label>Type Your Query</mat-label>
+              <textarea matInput placeholder="Dear Taxilo... " name="queryMessage" [(ngModel)]="queryMess.queryMessage"></textarea>
+            </mat-form-field>
+            <button mat-raised-button color="warn">Submit</button>
+          </form>
+
+    </mat-card>
+
+</div>

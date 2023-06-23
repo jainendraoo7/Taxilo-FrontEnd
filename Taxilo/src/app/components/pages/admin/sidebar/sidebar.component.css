@@ -1,0 +1,41 @@
+.header{
+
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+}
+
+.action{
+   /* border: 1px solid black; */
+}
+button{
+    margin-top: 30px;
+}
+
+.card{
+    position: fixed;
+    /* border: 1px solid black; */
+    width: 15%;
+}
+button{
+    margin-top: 20px;
+    padding: 25px 0px;
+    
+}
+span{
+    font-size: 20px;
+    font-weight: 200;
+    
+}
+i{
+    font-size: 25px;
+    margin-right: 20px;
+}
+.card {
+    width: 13%;
+
+}

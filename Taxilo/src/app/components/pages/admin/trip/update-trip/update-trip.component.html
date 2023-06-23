@@ -1,0 +1,38 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+
+        <mat-card class="card">
+
+            <form (ngSubmit)="updateTrips(userService.getCurrentBooking().tripBookingId)">
+
+                <mat-form-field style="width: 80%;" appearance="outline">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate placeholder="Start date" name="fromDateTime"
+                            [(ngModel)]="updateBooking.fromDateTime">
+                        <input matEndDate placeholder="End date" name="toDateTime" [(ngModel)]="updateBooking.toDateTime">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+
+                <mat-form-field style="width: 80%;" appearance="outline">
+                    <mat-label>Select CabType</mat-label>
+                    <mat-select [(ngModel)]="updateBooking.cabType" name="cabType" >
+                        <mat-option value="Mini">Mini</mat-option>
+                        <mat-option value="Sedan">Sedan</mat-option>
+                        <mat-option value="Suv">Suv</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary">Submit</button>
+
+            </form>
+
+        </mat-card>
+
+    </div>
+
+</div>

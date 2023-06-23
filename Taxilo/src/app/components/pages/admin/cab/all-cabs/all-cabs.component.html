@@ -1,0 +1,25 @@
+<mat-card class="card">
+
+    <h1>All Cabs</h1>
+<button mat-raised-button class="btn" routerLink="/registerCab">Register-Cab</button>
+     <table>
+        <tr>
+            <td>CabId</td>
+            <td>CabName</td>
+            <td>CabType</td>
+            <td>CabNumber</td>
+            <td>Details</td>
+            <td>Delete</td>
+        </tr>
+        <tr *ngFor="let cab of cabs">
+            <td>{{cab.cabId}}</td>
+            <td>{{cab.cabName}}</td>
+            <td>{{cab.cabType}}</td>
+            <td>{{cab.cabNumber}}</td>
+            <td><button mat-raised-button (click)="cabDetails(cab.cabNumber)">Details</button></td>
+            <td><button mat-raised-button color="warn" (click)="deleteCab(cab.cabId)">Delete</button></td>
+        </tr>
+     </table>
+
+
+</mat-card>

@@ -1,0 +1,31 @@
+<mat-card>
+
+    <h1>Users list</h1>
+    
+    <div class="sea">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search Users Here" (input)="searchUsers()"
+            class="search">
+        <button><i class="fa fa-search" id="btn"></i></button>
+    </div>
+
+    <table id="table">
+        <tr>
+            <td>UserId</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Mobile</td>
+
+            <td>Delete</td>
+        </tr>
+        <tr *ngFor="let user of filterUsers">
+            <td>{{ user.customerId }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.mobile}}</td>
+            <td><button mat-raised-button color="warn" (click)="deleteUser(user.customerId)">Delete</button></td>
+        </tr>
+    </table>
+
+
+
+</mat-card>

@@ -1,0 +1,65 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card class="card">
+
+        <h1>Cab Booking</h1>
+
+        <form (ngSubmit)="doSubmitForm(login.getUser().customerId)">
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>From</mat-label>
+                <input matInput placeholder="jainendra" name="fromLocation" [(ngModel)]="cabBooking.fromLocation">
+            </mat-form-field>
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>To</mat-label>
+                <input matInput placeholder="pat@example.com" name="toLocation" [(ngModel)]="cabBooking.toLocation">
+            </mat-form-field>
+
+            <!-- <mat-form-field style="width: 80%;" appearance="outline">
+          <mat-label>From DateTime</mat-label>
+          <input matInput placeholder="Date" type="datetime" name="fromDateTime" [(ngModel)]="cabBooking.fromDateTime">
+        </mat-form-field>
+  
+        <mat-form-field style="width: 80%;" appearance="outline">
+            <mat-label>From DateTime</mat-label>
+            <input matInput placeholder="Date" type="datetime" name="toDateTime" [(ngModel)]="cabBooking.toDateTime">
+          </mat-form-field> -->
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate placeholder="Start date" name="fromDateTime"
+                        [(ngModel)]="cabBooking.fromDateTime">
+                    <input matEndDate placeholder="End date" name="toDateTime" [(ngModel)]="cabBooking.toDateTime">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>Select CabType</mat-label>
+                <mat-select [(ngModel)]="cabBooking.cabType" name="role">
+                    <mat-option value="Mini" >Mini</mat-option>
+                    <mat-option value="Sedan" >Sedan</mat-option>
+                    <mat-option value="Suv" >Suv</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field style="width: 80%;" appearance="outline">
+                <mat-label>distanceInKm</mat-label>
+                <input matInput placeholder="Status" name="distanceInKm" [(ngModel)]="cabBooking.distanceInKm">
+            </mat-form-field>
+
+            <div class="btn">
+                <button type="submit" mat-raised-button color="primary"
+                    style="margin-right: 10px; background-color: rgb(255, 174, 0);">Send</button>
+                <button type="reset" mat-raised-button
+                    style="background-color: rgb(27, 13, 13); color: azure;">Reset</button>
+            </div>
+                                         
+        </form>
+
+    </mat-card>
+
+</div>

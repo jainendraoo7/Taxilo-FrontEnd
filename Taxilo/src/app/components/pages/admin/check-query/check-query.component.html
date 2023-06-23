@@ -1,0 +1,17 @@
+<div class="bootstrap-wrapper" style="margin-top: 100px;">
+
+    <mat-card class="card">
+
+        <h2>Subject: {{driverService.getQuery().subject}}</h2>
+
+        <h2>Query: {{driverService.getQuery().queryMessage}}</h2>
+        <h2 *ngIf="driverService.getQuery().resolved==true">Status: Resolved</h2>
+        <h2 *ngIf="driverService.getQuery().resolved==false">Status: Not-Resolved</h2>
+
+        <h3>DriverId: {{driverService.getQuery().driver.driverId}}</h3>
+        <h3>Name: {{driverService.getQuery().driver.name}}</h3>
+        <h3>Email: {{driverService.getQuery().driver.email}}</h3>
+        <button mat-raised-button color="primary" (click)="changeStatus(driverService.getQuery().queryId)">Resolved</button>
+    </mat-card>
+
+</div>

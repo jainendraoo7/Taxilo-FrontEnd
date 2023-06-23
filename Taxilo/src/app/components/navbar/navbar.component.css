@@ -1,0 +1,14 @@
+.toolbar{
+    background-color: rgb(247, 194, 71);
+    
+}
+
+.navbar-brand{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-link{
+  font-size: 20px;
+  
+}

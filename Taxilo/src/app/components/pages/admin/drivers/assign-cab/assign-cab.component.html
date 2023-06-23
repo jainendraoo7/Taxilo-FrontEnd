@@ -1,0 +1,28 @@
+<div class="bootstrao-wrapper">
+
+    <div class="container">
+
+        <mat-card class="card">
+
+            <form (ngSubmit)="doAssign()">
+
+                <mat-form-field style="width: 80%;" appearance="outline">
+                    <mat-label>Enter DriverID</mat-label>
+                    <input matInput placeholder="DriverId" type="number" name="driverId"
+                        [(ngModel)]="assignData.driverId">
+                </mat-form-field>
+
+                <mat-form-field style="width: 80%;" appearance="outline">
+                    <mat-label>Enter CabID</mat-label>
+                    <input matInput placeholder="CabId" type="number" name="driverId" [(ngModel)]="assignData.cabId">
+                </mat-form-field>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </mat-card>
+
+    </div>
+
+</div>

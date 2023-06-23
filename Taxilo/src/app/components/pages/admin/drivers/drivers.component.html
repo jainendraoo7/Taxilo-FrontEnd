@@ -1,0 +1,34 @@
+<mat-card style="height: auto;">
+
+    <h1>Drivers list</h1>
+    <div class="sea">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search Driver Here" (input)="searchDrivers()"
+            class="search">
+        <button><i class="fa fa-search" id="btn"></i></button>
+    </div>
+
+    <table id="table">
+        <tr>
+            <td>DriverId</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Mobile</td>
+            <td>License Number</td>
+            <td>Details</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+        <tr *ngFor="let driver of filterDrivers">
+            <td>{{ driver.driverId }}</td>
+            <td>{{ driver.name }}</td>
+            <td>{{driver.email}}</td>
+            <td>{{driver.mobile}}</td>
+            <td>{{driver.license}}</td>
+            <td><button mat-raised-button color="primary" (click)="driverDetails(driver.driverId)">Details</button></td>
+            <td><button mat-raised-button  (click)="updateDriver()">Update</button></td>
+            <td><button mat-raised-button color="warn" (click)="deleteDriver(driver.driverId)">Delete</button></td>
+        </tr>
+    </table>
+
+
+</mat-card>

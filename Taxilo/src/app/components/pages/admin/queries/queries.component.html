@@ -1,0 +1,30 @@
+<div class="bootstrap-wrapper">
+
+    <mat-card>
+
+         <h1>Queries</h1>
+         
+        <table>
+            <tr>
+                <td>DriverId</td>
+                <td>QueryId</td>
+                <td>QuerySubject</td>
+                <td>Status</td>
+                <td>Details</td>
+                
+
+            </tr>
+            <tr *ngFor="let query of queries">
+                <td>{{query.driver.driverId}}</td>
+                <td>{{query.queryId}}</td>
+                <td>{{query.subject}}</td>
+                <td *ngIf="query.resolved==true">Resolved</td>
+                <td *ngIf="query.resolved==false">Not-Resolved</td>
+
+                <td><button mat-raised-button color="primary" (click)="queryDetails(query.queryId)">Check</button></td>
+            </tr>
+        </table>
+
+    </mat-card>
+
+</div>
