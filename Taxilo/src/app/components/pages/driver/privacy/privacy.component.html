@@ -1,36 +1,36 @@
 <div class="bootsrap-wrapper">
 
-    <div class="container">
+  <div class="container">
 
-        <h1>Privacy</h1>
+    <h1>Privacy</h1>
 
-     <mat-card style="height: 60vh;">
-        
-        <mat-card class="card" >
+    <mat-card style="height: 60vh;">
 
-               <h2>Change Username & Password</h2>
+      <mat-card class="card">
 
-               <form (ngSubmit)="updateEmailPassword(login.getUser().driverId)">
+        <h2>Change Username & password</h2>
 
-                <mat-form-field style="width: 80%;" appearance="outline">
-                    <mat-label>Enter Email</mat-label>
-                    <input matInput placeholder="jainendra@gail.com" name="email" [(ngModel)]="updateData.email">
-                  </mat-form-field>
+        <form (ngSubmit)="updateEmailPassword(login.getUser().driverId)">
 
-                  <mat-form-field style="width: 80%;" appearance="outline">
-                    <mat-label>Enter password</mat-label>
-                    <input matInput placeholder="1234upi" type="password" name="password" [(ngModel)]="updateData.password" >
-                  </mat-form-field>
+          <mat-form-field style="width: 80%;" appearance="outline">
+            <mat-label>Enter Email</mat-label>
+            <input matInput placeholder="jainendra@gail.com" name="email" [(ngModel)]="updateData.email">
+          </mat-form-field>
 
-                  <button mat-raised-button type="submit">Submit</button>
+          <mat-form-field style="width: 80%;" appearance="outline">
+            <mat-label>Enter password</mat-label>
+            <input matInput placeholder="1234upi" type="password" name="password" [(ngModel)]="updateData.password">
+          </mat-form-field>
 
-               </form>
+          <button mat-raised-button type="submit">Submit</button>
 
-        </mat-card>
-     </mat-card>
+        </form>
 
-        
+      </mat-card>
+    </mat-card>
 
-    </div>
+
+
+  </div>
 
 </div>
